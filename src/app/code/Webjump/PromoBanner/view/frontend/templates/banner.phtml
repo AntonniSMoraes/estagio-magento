@@ -1,0 +1,15 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Webjump\PromoBanner\ViewModel\Banner $viewModel */
+$viewModel = $block->getData('view_model') ?: $block->getViewModel();
+?>
+
+<?php if ($viewModel): ?>
+    <div class="promo-banner">
+        <h2 class="promo-title"><?= $block->escapeHtml($viewModel->getTitulo()) ?></h2>
+        <p class="promo-text"><?= $block->escapeHtml($viewModel->getDescricao()) ?></p>
+        <span class="promo-coupon">
+            Cupom: <strong><?= $block->escapeHtml($viewModel->getCupom()) ?></strong>
+        </span>
+    </div>
+<?php endif; ?>
