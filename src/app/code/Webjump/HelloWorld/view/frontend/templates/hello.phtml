@@ -1,0 +1,11 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Webjump\HelloWorld\ViewModel\Hello $viewModel */
+$viewModel = $block->getViewModel();
+?>
+
+<?php if ($viewModel): ?>
+    <div class="webjump-hello">
+        <h2><?= $block->escapeHtml($viewModel->getMensagem()) ?></h2>
+    </div>
+<?php endif; ?>
