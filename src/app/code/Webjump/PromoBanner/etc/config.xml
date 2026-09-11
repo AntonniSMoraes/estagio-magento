@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <promo_banner>
+            <general>
+                <enabled>1</enabled>
+                <title>Semana Especial Webjump</title>
+                <description>Aproveite descontos exclusivos e frete grátis em toda a loja!</description>
+                <coupon>BEMVINDO10</coupon>
+            </general>
+        </promo_banner>
+    </default>
+</config>
