@@ -1,0 +1,19 @@
+{
+    "webjump_product_reviews": {
+        "column": {
+            "entity_id": true,
+            "customer_name": true,
+            "product_sku": true,
+            "rating": true,
+            "comment": true,
+            "is_approved": true,
+            "created_at": true
+        },
+        "index": {
+            "WEBJUMP_PRODUCT_REVIEWS_PRODUCT_SKU": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

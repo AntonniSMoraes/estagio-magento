@@ -386,6 +386,7 @@ return [
         'PayPal_BraintreeReward' => 1,
         'Webjump_CatalogExtension' => 1,
         'Webjump_HelloWorld' => 1,
+        'Webjump_ProductReviews' => 1,
         'Webjump_PromoBanner' => 1
     ]
 ];
