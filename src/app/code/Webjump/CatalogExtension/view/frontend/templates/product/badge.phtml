@@ -1,0 +1,13 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Webjump\CatalogExtension\ViewModel\ProductBadge $viewModel */
+$viewModel = $block->getData('view_model');
+?>
+
+<?php if ($viewModel && $viewModel->isSustainable()): ?>
+    <div class="sustainable-badge-wrapper" style="margin: 10px 0;">
+        <span class="sustainable-badge" style="background-color: #2e7d32; color: #fff; padding: 4px 10px; font-weight: bold; border-radius: 4px; font-size: 12px; display: inline-flex; align-items: center; gap: 4px;">
+            <?= $block->escapeHtml(__('Produto Sustentável')) ?>
+        </span>
+    </div>
+<?php endif; ?>
