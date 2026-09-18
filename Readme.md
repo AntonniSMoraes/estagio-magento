@@ -163,3 +163,33 @@ app/code/Webjump/PromoBanner/
   * ***/ViewModel/Banner.php:*** Atualizado para receber a injeção de dependência de ScopeConfigInterface e ler dinamicamente os valores salvos no painel administrativo, semelhante à configuração OSGi do AEM.
 
   * ***/view/frontend/templates/banner.phtml:*** Exibe os dados informados pelo lojista aplicando escape de saída (escapeHtml), respeitando a regra de ativação configurada no painel.
+
+  # Desafio 14.1 - A Camada de dados
+
+* **Estrutura de Pastas:** O módulo `Webjump_CatalogExtension` foi estendido para criar um atributo EAV de produto via código (Data Patch) e exibir um selo na página de detalhes do item:
+```bash
+app/code/Webjump/CatalogExtension/
+├── registration.php
+├── Setup/
+│   └── Patch/
+│       └── Data/
+│           └── AddSustainableAttribute.php
+├── ViewModel/
+│   └── ProductBadge.php
+└── view/
+    └── frontend/
+        ├── layout/
+        │   └── catalog_product_view.xml
+        └── templates/
+            └── product/
+                └── badge.phtml
+```
+
+  ### Por que foi escolhido o escopo Global (`SCOPE_GLOBAL`)?
+
+* **Natureza do Atributo:** O selo define uma característica que pertence à confecção do produto em si, e não à forma como ele é apresentado ou vendido. 
+  * *Exemplo:* Se a "Camiseta Estágio 2026" é produzida com algodão orgânico ou material reciclado, ela continua sendo sustentável independentemente de ser visualizada no Brasil ou no exterior. Trata-se de uma propriedade do item, da mesma forma que seu peso ou dimensões físicas.
+
+* **Evitar inconsistências cadastrais (Store View):** O escopo `Store View` serve para dados que mudam de acordo com o idioma ou a região (como nome e descrição traduzidos). Se utilizássemos `Store View` para a sustentabilidade, o lojista seria obrigado a marcar "Yes" em cada idioma cadastrado na loja. Caso esquecesse de preencher na visão em inglês, o produto seria exibido como ecológico na loja brasileira, mas comum na loja internacional.
+
+* **Estrutura no Banco de Dados (EAV):** Como vimos na arquitetura EAV, o Magento grava valores em tabelas verticais (`catalog_product_entity_int`). Com o escopo Global, o sistema cria apenas um único registro no banco (`store_id = 0`) para aquele produto, sem gerar linhas duplicadas para cada visão de loja e sem sobrecarregar as consultas e índices.
