@@ -14,4 +14,11 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="Magento\Ui\Controller\Adminhtml\Export\GridToCsv">
+        <plugin name="webjump_reviews_export_acl" type="Webjump\ProductReviews\Plugin\ExportAuthorization"/>
+    </type>
+    <type name="Magento\Ui\Controller\Adminhtml\Export\GridToXml">
+        <plugin name="webjump_reviews_export_acl" type="Webjump\ProductReviews\Plugin\ExportAuthorization"/>
+    </type>
 </config>

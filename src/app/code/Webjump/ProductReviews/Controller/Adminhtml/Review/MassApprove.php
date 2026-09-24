@@ -39,6 +39,7 @@ class MassApprove extends Action implements HttpPostActionInterface
     {
         $approved = 0;
         try {
+            // Filter also handles "select all" and excluded rows across grid pages.
             $collection = $this->filter->getCollection($this->collectionFactory->create());
             foreach ($collection as $review) {
                 if ($review->isApproved()) {

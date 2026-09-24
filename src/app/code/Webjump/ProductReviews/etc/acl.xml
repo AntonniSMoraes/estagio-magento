@@ -4,6 +4,7 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Webjump_ProductReviews::reviews" title="Avaliações de produtos" sortOrder="90"/>
+                <resource id="Webjump_ProductReviews::config" title="Configurar avaliações de produtos" sortOrder="92"/>
                 <resource id="Webjump_ProductReviews::export" title="Exportar avaliações de produtos" sortOrder="91"/>
             </resource>
         </resources>
