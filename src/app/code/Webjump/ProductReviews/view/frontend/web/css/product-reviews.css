@@ -1,0 +1,40 @@
+.webjump-product-reviews {
+    clear: both;
+    display: flow-root;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 32px;
+    margin-bottom: 32px;
+}
+
+.webjump-product-reviews > h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.webjump-product-reviews > p {
+    margin-bottom: 24px;
+    color: #595959;
+}
+
+.webjump-product-reviews .webjump-product-review {
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    overflow-wrap: anywhere;
+}
+
+.webjump-product-reviews .webjump-product-review h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.webjump-product-reviews .webjump-product-review p {
+    margin: 0 0 8px;
+    line-height: 1.6;
+}
+
+.webjump-product-reviews .webjump-product-review p:last-child {
+    margin-bottom: 0;
+    white-space: pre-line;
+}
