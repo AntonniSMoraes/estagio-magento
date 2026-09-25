@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Webjump\ProductReviews\Model\ResourceModel\Review\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">webjump_product_reviews</argument>
+            <argument name="resourceModel" xsi:type="string">Webjump\ProductReviews\Model\ResourceModel\Review</argument>
+            <argument name="identifierName" xsi:type="string">entity_id</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="webjump_productreviews_listing_data_source" xsi:type="string">Webjump\ProductReviews\Model\ResourceModel\Review\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
