@@ -6,8 +6,16 @@ namespace Webjump\ProductReviews\Model;
 use Magento\Framework\Model\AbstractModel;
 use Webjump\ProductReviews\Api\Data\ReviewInterface;
 
-class Review extends AbstractModel implements ReviewInterface
+class Review extends AbstractModel implements ReviewInterface, \Magento\Framework\DataObject\IdentityInterface
 {
+    public const CACHE_TAG = 'webjump_productreviews';
+    protected $_cacheTag = self::CACHE_TAG;
+
+    public function getIdentities()
+    {
+        return [self::CACHE_TAG];
+    }
+
     protected function _construct(): void
     {
         $this->_init(ResourceModel\Review::class);

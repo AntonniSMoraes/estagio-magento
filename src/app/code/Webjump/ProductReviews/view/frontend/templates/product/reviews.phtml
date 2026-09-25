@@ -1,0 +1,17 @@
+<?php
+/** @var \Webjump\ProductReviews\Block\Product\Reviews $block */
+$reviews = $block->getReviews();
+?>
+<?php if ($reviews): ?>
+    <section class="webjump-product-reviews" aria-labelledby="webjump-reviews-title">
+        <h2 id="webjump-reviews-title"><?= $block->escapeHtml(__('Avaliações de clientes')) ?></h2>
+        <p><?= $block->escapeHtml(__('Até 10 avaliações aprovadas mais recentes.')) ?></p>
+        <?php foreach ($reviews as $review): ?>
+            <article class="webjump-product-review">
+                <h3><?= $block->escapeHtml($review->getCustomerName()) ?></h3>
+                <p><?= $block->escapeHtml(__('Nota: %1 de 5', $review->getRating())) ?></p>
+                <p><?= $block->escapeHtml($review->getComment()) ?></p>
+            </article>
+        <?php endforeach; ?>
+    </section>
+<?php endif; ?>

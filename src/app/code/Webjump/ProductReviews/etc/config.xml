@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default><webjump_productreviews><general><enabled>1</enabled><minimum_rating>1</minimum_rating></general></webjump_productreviews></default>
+</config>

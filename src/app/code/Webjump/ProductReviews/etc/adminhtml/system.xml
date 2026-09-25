@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="webjump" translate="label" sortOrder="100"><label>Webjump</label></tab>
+        <section id="webjump_productreviews" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Avaliações de produtos</label><tab>webjump</tab><resource>Webjump_ProductReviews::config</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configurações gerais</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Exibir avaliações na loja</label><source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="minimum_rating" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Nota mínima para exibição</label><source_model>Webjump\ProductReviews\Model\Source\Rating</source_model>
+                    <comment>Somente avaliações aprovadas com esta nota ou superior serão exibidas.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

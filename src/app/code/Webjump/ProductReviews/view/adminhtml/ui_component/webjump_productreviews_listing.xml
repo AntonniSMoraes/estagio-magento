@@ -6,6 +6,7 @@
         </item>
     </argument>
     <settings>
+        <buttons><button name="add"><url path="webjump_productreviews/review/new"/><class>primary</class><label translate="true">Nova avaliação</label></button></buttons>
         <spinner>review_columns</spinner>
         <deps><dep>webjump_productreviews_listing.webjump_productreviews_listing_data_source</dep></deps>
     </settings>
@@ -44,6 +45,11 @@
             </action>
         </massaction>
         <paging name="listing_paging"/>
+        <exportButton name="export_button" class="Webjump\ProductReviews\Ui\Component\ExportButton">
+            <settings>
+                <selectProvider>webjump_productreviews_listing.webjump_productreviews_listing.review_columns.ids</selectProvider>
+            </settings>
+        </exportButton>
     </listingToolbar>
     <columns name="review_columns">
         <selectionsColumn name="ids" sortOrder="10">
@@ -73,5 +79,9 @@
         <column name="created_at" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date" sortOrder="80">
             <settings><filter>dateRange</filter><dataType>date</dataType><label translate="true">Criada em</label></settings>
         </column>
+    
+        <actionsColumn name="actions" class="Webjump\ProductReviews\Ui\Component\Listing\Column\ReviewActions" sortOrder="90">
+            <settings><indexField>entity_id</indexField><label translate="true">Ações</label></settings>
+        </actionsColumn>
     </columns>
 </listing>
