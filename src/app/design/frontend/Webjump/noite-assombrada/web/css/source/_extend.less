@@ -7,6 +7,37 @@
         font-display: swap;
     }
 
+    .noite-campaign {
+        background-color: #2a1b3d;
+        border-bottom: 2px solid @theme__color__primary;
+        color: @text__color;
+        padding: @indent__s @indent__base;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: @indent__xs;
+        box-sizing: border-box;
+
+        &__title {
+            color: @theme__color__primary;
+            font-family: @heading__font-family__base;
+            font-size: 1.8rem;
+            letter-spacing: .05em;
+        }
+
+        &__link {
+            color: @link__hover__color;
+            font-weight: bold;
+            text-decoration: underline;
+
+            &:hover {
+                color: @theme__color__primary;
+            }
+        }
+    }
+
     .logo {
         img {
             max-width: 150px;
@@ -121,6 +152,11 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .noite-campaign {
+        flex-direction: row;
+        gap: 15px;
+    }
+
     .page-header .header.content { padding-top: @indent__l; }
     .navigation .level0 > .level-top { color: @text__color; }
     .navigation .level0 > .level-top:hover { color: @link__hover__color; }

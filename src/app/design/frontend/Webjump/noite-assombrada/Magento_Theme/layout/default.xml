@@ -1,6 +1,4 @@
-<?xml version="1.0"?>
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="logo">
             <arguments>
@@ -9,5 +7,10 @@
                 <argument name="logo_width" xsi:type="number">250</argument>
             </arguments>
         </referenceBlock>
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="noite.campaign.banner" template="Magento_Theme::html/campaign.phtml" before="-"/>
+        </referenceContainer>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <move element="breadcrumbs" destination="columns.top" before="page.main.title"/>
     </body>
 </page>
