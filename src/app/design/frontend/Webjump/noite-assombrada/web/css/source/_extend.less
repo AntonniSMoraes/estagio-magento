@@ -1,0 +1,139 @@
+& when (@media-common = true) {
+    @font-face {
+        font-family: 'Creepster';
+        src: url('@{baseDir}fonts/Creepster/Creepster-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    .logo {
+        img {
+            max-width: 150px;
+            height: auto;
+        }
+    }
+
+    .page-header {
+        background: transparent;
+        border-bottom: 2px solid @theme__color__primary;
+
+        .panel.wrapper {
+            background: transparent;
+            color: @text__color;
+        }
+    }
+
+    .page-footer,
+    .page-footer .footer.content,
+    .page-bottom,
+    .page-footer .links,
+    .panel.wrapper {
+        background-color: transparent !important;
+        background: transparent !important;
+    }
+
+    .page-footer {
+        color: @text__color;
+        border-top: 2px solid @theme__color__primary;
+        .footer.content { border-color: @border-color__base; }
+        .footer.content .links a { color: @link__color; }
+        .footer.content .links a:hover { color: @link__hover__color; }
+    }
+
+    .copyright { color: @text__color__muted; }
+    .page-title { letter-spacing: .04em; }
+
+    .product-item {
+        .product-item-info {
+            background: rgba(42, 27, 61, 0.6);
+            border: 1px solid @border-color__base;
+            border-radius: 8px;
+            padding: @indent__s;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .product-item-inner { 
+            background: transparent; 
+            color: @text__color; 
+        }
+        .product-item-name a { color: @text__color; }
+        .price { color: @link__color; }
+    }
+
+    .product-info-main {
+        .price { color: @link__color; }
+        .stock.available { color: #a9ef85; }
+    }
+
+    .product.data.items {
+        > .item.title > .switch { background: #39264d; color: @text__color; }
+        > .item.title.active > .switch,
+        > .item.title > .switch:hover { background: #2a1b3d; color: @link__color; }
+        > .item.content { background: #2a1b3d; color: @text__color; border-color: @border-color__base; }
+    }
+
+    .block-minicart, .modal-content, .modal-header,
+    .opc-block-summary, .cart-summary, .filter-options-content {
+        color: #181020;
+        a { color: #75320a; }
+        a:hover { color: #4f236d; }
+    }
+    .block-minicart, .opc-block-summary, .cart-summary { background: #faf7fc; }
+    .action.primary { border-radius: 6px; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+        outline: 2px solid @focus__color;
+        outline-offset: 3px;
+    }
+
+    body {
+        background-color: @page__background-color;
+        background-image:
+            linear-gradient(
+                rgba(24, 16, 32, .85),
+                rgba(24, 16, 32, .85)
+            ),
+            url('../images/background.png');
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .page-wrapper,
+    .nav-sections,
+    .navigation,
+    .copyright {
+        background: transparent !important;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .products-grid .product-item-info:hover,
+    .products-grid .product-item-info.active,
+    .product-item-info:hover,
+    .product-item-info.active {
+        background: rgba(42, 27, 61, 0.35) !important;
+        border-color: @theme__color__primary !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-header .header.content { padding-top: @indent__l; }
+    .navigation .level0 > .level-top { color: @text__color; }
+    .navigation .level0 > .level-top:hover { color: @link__hover__color; }
+
+    .page-footer,
+    .page-footer .footer.content {
+        background: transparent !important;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .nav-sections { background: #2a1b3d; }
+    .nav-sections-item-title { background: #39264d; border-color: @border-color__base; }
+    .nav-sections-item-title.active { background: #2a1b3d; }
+    .nav-sections .header.links li > a { color: @text__color; }
+}
