@@ -1,0 +1,11 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<aside class="noite-campaign" aria-label="<?= $escaper->escapeHtmlAttr(__('Halloween campaign')) ?>">
+    <strong class="noite-campaign__title"><?= $escaper->escapeHtml(__('Haunted Night')) ?></strong>
+    <span><?= $escaper->escapeHtml(__('Discover our Halloween collection.')) ?></span>
+    <a class="noite-campaign__link" href="<?= $escaper->escapeUrl($block->getUrl('catalogsearch/result/', ['q' => 'Halloween'])) ?>">
+        <?= $escaper->escapeHtml(__('Explore Halloween offers')) ?>
+    </a>
+</aside>
