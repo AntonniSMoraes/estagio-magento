@@ -25,3 +25,8 @@ composer.lock
 !/README.md
 !/op-exclude.txt
 auth.json
+
+# Documentacao dos desafios
+!/docs/
+!/docs/desafios/
+!/docs/desafios/*.md
