@@ -1,0 +1,13 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Webjump\CatalogExtension\ViewModel\ProductBadge $viewModel */
+$viewModel = $block->getData('view_model');
+?>
+
+<?php if ($viewModel && $viewModel->isSustainable()): ?>
+    <div class="noite-selo-wrapper">
+        <span class="noite-selo">
+            <?= $block->escapeHtml(__('Haunted offer')) ?>
+        </span>
+    </div>
+<?php endif; ?>
