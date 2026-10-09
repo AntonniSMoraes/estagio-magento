@@ -12,5 +12,10 @@
         </referenceContainer>
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         <move element="breadcrumbs" destination="columns.top" before="page.main.title"/>
+        <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="noite.modo.interruptor"
+                   template="Magento_Theme::html/modo-assombrado.phtml" before="-"/>
+        </referenceContainer>
     </body>
 </page>
