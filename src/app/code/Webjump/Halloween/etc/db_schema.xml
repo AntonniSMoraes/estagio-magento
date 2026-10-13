@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="quote" resource="checkout" engine="innodb">
+        <column xsi:type="varchar" name="mensagem_bruxaria" nullable="true" length="200" comment="Haunted Message"/>
+    </table>
+    <table name="sales_order" resource="sales" engine="innodb">
+        <column xsi:type="varchar" name="mensagem_bruxaria" nullable="true" length="200" comment="Haunted Message"/>
+    </table>
+</schema>

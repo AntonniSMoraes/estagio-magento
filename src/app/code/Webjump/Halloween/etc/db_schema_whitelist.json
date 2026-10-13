@@ -1,0 +1,12 @@
+{
+    "quote": {
+        "column": {
+            "mensagem_bruxaria": true
+        }
+    },
+    "sales_order": {
+        "column": {
+            "mensagem_bruxaria": true
+        }
+    }
+}
