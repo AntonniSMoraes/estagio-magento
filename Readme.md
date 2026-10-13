@@ -17,6 +17,7 @@ Projeto de estudos com Magento 2, WSL2 e Docker. A documentação está separada
 | 15.2 | [Formulário, configuração e exportação](docs/desafios/desafio-15.2.md) |
 | 16.1 | [A camada visual](docs/desafios/desafio-16.1.md) |
 | 17.1 | [Contagem regressiva e selo assombrado](docs/desafios/desafio-17.1.md) |
+| 17.2 | [Modo assombrado e minicart](docs/desafios/desafio-17.2.md) |
 
 ## Organização
 

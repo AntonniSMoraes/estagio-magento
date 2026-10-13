@@ -209,3 +209,40 @@
         font-weight: bold;
     }
 }
+
+& when (@media-common = true) {
+    .noite-modo {
+        float: left;
+        margin: 0 @indent__s @indent__xs 0;
+        padding: @indent__xs @indent__s;
+        border: 1px solid @theme__color__primary;
+        background: @panel__background-color;
+        color: @text__color;
+        &[aria-pressed="true"] {
+            background: @theme__color__primary;
+            color: @button-primary__color;
+        }
+    }
+    html.modo-assombrado {
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url('../images/background.png');
+            background-color: #08050d;
+        }
+        .noite-campaign,
+        .noite-contador,
+        .nav-sections-item-title {
+            background-color: #100918;
+        }
+        .product-item-info {
+            background-color: rgba(8, 5, 13, .85);
+        }
+    }
+    .noite-minicart-mensagem {
+        padding: @indent__s;
+        margin: @indent__s @indent__l @indent__base 0;
+        background: @panel__background-color;
+        border-left: 3px solid @theme__color__primary;
+        color: @text__color;
+        font-weight: bold;
+    }
+}
