@@ -18,10 +18,10 @@ Projeto de estudos com Magento 2, WSL2 e Docker. A documentação está separada
 | 16.1 | [A camada visual](docs/desafios/desafio-16.1.md) |
 | 17.1 | [Contagem regressiva e selo assombrado](docs/desafios/desafio-17.1.md) |
 | 17.2 | [Modo assombrado e minicart](docs/desafios/desafio-17.2.md) |
+| 17.3 | [Mensagem assombrada no checkout](docs/desafios/desafio-17.3.md) |
 
 ## Organização
 
-Cada arquivo reúne a implementação, as decisões e os testes documentados daquele desafio. O conteúdo anterior foi preservado, removendo apenas o título duplicado vazio do 14.2.
-A organização cobre os desafios presentes no README anterior e acrescenta o 17.1 validado nesta etapa. Os desafios 15.3 e 16.2 não tinham seção no README original e ainda precisam de documentação central nesta pasta.
+Cada arquivo reúne a implementação, as decisões e os testes realizados em seu respectivo desafio.
 
 Raiz do projeto no WSL: `/root/Sites/magento`. Código Magento: `src/`. Os comandos `bin/` são executados na raiz do projeto Docker.

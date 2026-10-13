@@ -1,0 +1,11 @@
+<?php $message = $block->getOrder()->getData('mensagem_bruxaria'); ?>
+<?php if ($message !== null && $message !== ''): ?>
+    <section class="admin__page-section">
+        <div class="admin__page-section-title">
+            <span class="title"><?= $block->escapeHtml(__('Haunted message on the package')) ?></span>
+        </div>
+        <div class="admin__page-section-content">
+            <p><?= $block->escapeHtml($message) ?></p>
+        </div>
+    </section>
+<?php endif; ?>
