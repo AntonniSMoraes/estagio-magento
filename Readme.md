@@ -19,6 +19,7 @@ Projeto de estudos com Magento 2, WSL2 e Docker. A documentação está separada
 | 17.1 | [Contagem regressiva e selo assombrado](docs/desafios/desafio-17.1.md) |
 | 17.2 | [Modo assombrado e minicart](docs/desafios/desafio-17.2.md) |
 | 17.3 | [Mensagem assombrada no checkout](docs/desafios/desafio-17.3.md) |
+| 17.4 | [Caixão de Ofertas no Page Builder](docs/desafios/desafio-17.4.md) |
 
 ## Organização
 
